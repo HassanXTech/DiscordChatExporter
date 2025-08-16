@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #36393F;
+  color: #DCDDDE;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Discord-like scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2F3136;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202225;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #40444B;
+}
+
+/* Custom Discord-like components */
+@layer components {
+  .discord-button {
+    @apply bg-discord-primary hover:bg-discord-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-200;
+  }
+  
+  .discord-button-secondary {
+    @apply bg-discord-light hover:bg-discord-lighter text-discord-text font-medium py-2 px-4 rounded transition-colors duration-200;
+  }
+  
+  .discord-input {
+    @apply bg-discord-light border border-discord-lighter text-discord-text placeholder-discord-textMuted rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-discord-primary;
+  }
+  
+  .discord-card {
+    @apply bg-discord-dark border border-discord-lighter rounded-lg p-4;
+  }
+}
