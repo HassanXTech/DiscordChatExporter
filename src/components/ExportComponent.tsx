@@ -119,7 +119,7 @@ const ExportComponent: React.FC<ExportComponentProps> = ({
         </div>
 
         {/* Export Options Panel */}
-        <div className="bg-discord-darker rounded-xl p-8 mb-12 border border-discord-lighter/20 shadow-2xl">
+        <div className="bg-discord-darker rounded-xl p-8 mb-12 border border-discord-lighter/20 shadow-2xl max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Export Options</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -223,7 +223,7 @@ const ExportComponent: React.FC<ExportComponentProps> = ({
         </div>
 
         {/* Export Button and Progress */}
-        <div className="text-center space-y-8">
+        <div className="text-center space-y-8 max-w-2xl mx-auto">
           {/* Progress Bar */}
           {isLoading && (
             <div className="w-full max-w-lg mx-auto">
@@ -262,7 +262,7 @@ const ExportComponent: React.FC<ExportComponentProps> = ({
 
         {/* Error Display */}
         {error && (
-          <div className="mt-8 p-5 bg-discord-danger/20 border border-discord-danger rounded-xl">
+          <div className="mt-8 p-5 bg-discord-danger/20 border border-discord-danger rounded-xl max-w-2xl mx-auto">
             <p className="text-lg text-discord-danger flex items-center justify-center">
               <AlertCircle className="w-6 h-6 mr-3" />
               {error}
@@ -272,7 +272,7 @@ const ExportComponent: React.FC<ExportComponentProps> = ({
 
         {/* Progress Display */}
         {exportProgress && !isLoading && (
-          <div className="mt-8 p-5 bg-discord-primary/20 border border-discord-primary rounded-xl">
+          <div className="mt-8 p-5 bg-discord-primary/20 border border-discord-primary rounded-xl max-w-2xl mx-auto">
             <p className="text-lg text-discord-primary flex items-center justify-center">
               <Loader2 className="w-6 h-6 mr-3 animate-spin" />
               {exportProgress}
